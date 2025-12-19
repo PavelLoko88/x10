@@ -41,7 +41,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: calc(44 / var(--screen-width) * 100vw);
-  gap: 8px;
+  gap: calc(8 / var(--screen-width) * 100vw);
 }
 .headerTitle {
   font-size: calc(46 / var(--screen-width) * 100vw);
@@ -49,23 +49,84 @@ body {
   letter-spacing: calc(1 / var(--screen-width) * 100vw);
   text-transform: uppercase;
   color: rgb(30, 33, 44);
+  line-height: 1.3;
 }
 .headerTitleSub {
   font-weight: 900;
   color: rgb(30, 33, 44);
+  line-height: 1.5;
   font-size: calc(16 / var(--screen-width) * 100vw);
 }
 
 .list {
   margin-top: 60px;
   display: flex;
-  gap: 30px;
+  gap: calc(30 / var(--screen-width) * 100vw);
   flex-wrap: wrap;
 }
 .listCard {
-  width: 390px;
-  height: 438px;
-  background-color: red;
+  width: calc(390 / var(--screen-width) * 100vw);
+  height: calc(438 / var(--screen-width) * 100vw);
+  border-radius: calc(4 / var(--screen-width) * 100vw);
+  display: flex;
+  flex-direction: column;
+  border: calc(1 / var(--screen-width) * 100vw) solid rgb(229, 232, 237);
+  box-shadow: calc(0 / var(--screen-width) * 100vw) calc(4 / var(--screen-width) * 100vw) calc(4 / var(--screen-width) * 100vw) calc(-4 / var(--screen-width) * 100vw) rgba(30, 33, 44, 0.03), calc(0 / var(--screen-width) * 100vw) calc(12 / var(--screen-width) * 100vw) calc(10 / var(--screen-width) * 100vw) calc(-6 / var(--screen-width) * 100vw) rgba(154, 156, 165, 0.04), calc(0 / var(--screen-width) * 100vw) calc(30 / var(--screen-width) * 100vw) calc(24 / var(--screen-width) * 100vw) calc(-10 / var(--screen-width) * 100vw) rgba(154, 156, 165, 0.05), calc(0 / var(--screen-width) * 100vw) calc(80 / var(--screen-width) * 100vw) calc(80 / var(--screen-width) * 100vw) calc(-20 / var(--screen-width) * 100vw) rgba(154, 156, 165, 0.08);
+}
+.listCardImage {
+  width: 100%;
+  height: calc(240 / var(--screen-width) * 100vw);
+}
+.listCardContent {
+  padding: calc(24 / var(--screen-width) * 100vw);
+  display: flex;
+  flex-direction: column;
+  gap: calc(20 / var(--screen-width) * 100vw);
+}
+.listCardContentTag {
+  background-color: #03CEA4;
+  padding: 0px calc(8 / var(--screen-width) * 100vw);
+  height: calc(23 / var(--screen-width) * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(4 / var(--screen-width) * 100vw);
+  width: fit-content;
+}
+.listCardContentTagText {
+  font-weight: 400;
+  font-size: calc(14 / var(--screen-width) * 100vw);
+  line-height: 1.5;
+  color: #ffffff;
+}
+.listCardContentTitle {
+  color: rgb(30, 33, 44);
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: calc(20 / var(--screen-width) * 100vw);
+}
+.listCardContentInfo {
+  display: flex;
+  align-items: center;
+  gap: calc(8 / var(--screen-width) * 100vw);
+}
+.listCardContentInfoPrice {
+  font-weight: 700;
+  font-size: calc(18 / var(--screen-width) * 100vw);
+  line-height: 1.5;
+  color: #FF4242;
+}
+.listCardContentInfoAuthor {
+  font-weight: 400;
+  font-size: calc(18 / var(--screen-width) * 100vw);
+  line-height: 1.5;
+  color: #787A80;
+}
+
+.stick {
+  width: calc(1 / var(--screen-width) * 100vw);
+  height: calc(16 / var(--screen-width) * 100vw);
+  background-color: #787A80;
 }
 
 /*# sourceMappingURL=styles.css.map */

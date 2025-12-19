@@ -18,6 +18,17 @@ html {
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  cursor: default;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -117,6 +128,38 @@ body {
   font-size: calc(18 / var(--screen-width) * 100vw);
   line-height: 1.5;
   color: #787A80;
+}
+
+.more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: calc(70 / var(--screen-width) * 100vw) 0px;
+}
+.moreButton {
+  display: flex;
+  justify-content: center;
+  padding: calc(10 / var(--screen-width) * 100vw);
+  gap: calc(16 / var(--screen-width) * 100vw);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: 230ms ease-in-out;
+  cursor: pointer;
+}
+.moreButton:hover {
+  opacity: 0.7;
+}
+.moreButtonImage {
+  width: calc(24 / var(--screen-width) * 100vw);
+  height: calc(24 / var(--screen-width) * 100vw);
+}
+.moreButtonText {
+  font-weight: 700;
+  font-size: calc(16 / var(--screen-width) * 100vw);
+  line-height: 1.6;
+  color: #424551;
 }
 
 .stick {

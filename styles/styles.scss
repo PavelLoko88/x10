@@ -9,6 +9,17 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  cursor: default;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -124,6 +135,44 @@ body {
     }
   }
 }
+
+
+.more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: scale(70) 0px;
+
+  &Button {
+    display: flex;
+    justify-content: center;
+    padding: scale(10);
+    gap: scale(16);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 230ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &Image {
+      width: scale(24);
+      height: scale(24)
+    }
+
+    &Text {
+      font-weight: 700;
+      font-size: scale(16);
+      line-height: 1.6;
+      color: $gray-800;
+    }
+  }
+}
+
 
 .stick {
   width: scale(1);

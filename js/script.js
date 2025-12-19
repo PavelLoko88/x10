@@ -71,34 +71,109 @@ const data = [
     price: "$240",
     author: "Cody Fisher",
   },
+  {
+    id: 10,
+    image: "./assets/item1.png",
+    tag: "Marketing",
+    title: "The Ultimate Google Ads Training Course",
+    price: "$100",
+    author: "Jerome Bell",
+  },
+  {
+    id: 11,
+    image: "./assets/item2.png",
+    tag: "Management",
+    title: "Prduct Management Fundamentals",
+    price: "$480",
+    author: "Marvin McKinney",
+  },
+  {
+    id: 12,
+    image: "./assets/item3.png",
+    tag: "HR & Recruting",
+    title: "HR  Management and Analytics",
+    price: "$200",
+    author: "Leslie Alexander Li",
+  },
+  {
+    id: 13,
+    image: "./assets/item4.png",
+    tag: "Marketing",
+    title: "Brand Management & PR Communications",
+    price: "$530",
+    author: "Kristin Watson",
+  },
+  {
+    id: 14,
+    image: "./assets/item5.png",
+    tag: "Design",
+    title: "Graphic Design Basic",
+    price: "$500",
+    author: "Guy Hawkins",
+  },
+  {
+    id: 15,
+    image: "./assets/item6.png",
+    tag: "Management",
+    title: "Business Development Management",
+    price: "$400",
+    author: "Dianne Russell",
+  },
+  {
+    id: 16,
+    image: "./assets/item2.png",
+    tag: "Development",
+    title: "Highload Software Architecture",
+    price: "$600",
+    author: "Brooklyn Simmons",
+  },
+  {
+    id: 17,
+    image: "./assets/item8.png",
+    tag: "HR & Recruting",
+    title: "Human Resources – Selection and Recruitment",
+    price: "$150",
+    author: "Kathryn Murphy",
+  },
+  {
+    id: 18,
+    image: "./assets/item9.png",
+    tag: "Design",
+    title: "User Experience. Human-centered Design",
+    price: "$240",
+    author: "Cody Fisher",
+  },
 ];
 
 const listContainer = document.querySelector(".list");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-listContainer.innerHTML = data
-  .map((item) => {
-    let tagClass = "";
-    switch (item.tag.toLowerCase()) {
-      case "marketing":
-        tagClass = "marketing";
-        break;
-      case "management":
-        tagClass = "management";
-        break;
-      case "hr & recruting":
-        tagClass = "recruting";
-        break;
-      case "design":
-        tagClass = "design";
-        break;
-      case "development":
-        tagClass = "development";
-        break;
-      default:
-        tagClass = "";
-    }
+let currentIndex = 0;
+const itemsPerPage = 9;
 
-    return `
+function createItemHTML(item) {
+  let tagClass = "";
+  switch (item.tag.toLowerCase()) {
+    case "marketing":
+      tagClass = "marketing";
+      break;
+    case "management":
+      tagClass = "management";
+      break;
+    case "hr & recruting":
+      tagClass = "recruting";
+      break;
+    case "design":
+      tagClass = "design";
+      break;
+    case "development":
+      tagClass = "development";
+      break;
+    default:
+      tagClass = "";
+  }
+
+  return `
   <div class="listCard">
     <img class="listCardImage" src="${item.image}" alt="card-image" />
     <div class="listCardContent">
@@ -114,5 +189,24 @@ listContainer.innerHTML = data
     </div>
   </div>
   `;
-  })
-  .join("");
+}
+
+function loadMoreItems() {
+  const start = currentIndex;
+  const end = currentIndex + itemsPerPage;
+  const itemsToAdd = data.slice(start, end);
+
+  itemsToAdd.forEach((item) => {
+    listContainer.innerHTML += createItemHTML(item);
+  });
+
+  currentIndex += itemsPerPage;
+
+  if (currentIndex >= data.length) {
+    loadMoreBtn.style.display = "none";
+  }
+}
+
+loadMoreItems();
+
+loadMoreBtn.addEventListener("click", loadMoreItems);

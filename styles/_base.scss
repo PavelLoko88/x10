@@ -1,0 +1,13 @@
+html {
+  font-size: calc(100vw / 18);
+  // font-size: 20px;
+
+  // // Ограничение сверху и снизу
+  // @media (min-width: #{$breakpoint-lg}) {
+  //   font-size: calc(#{$breakpoint-lg} / #{$base-width} * 1px);
+  // }
+
+  // @media (max-width: #{$breakpoint-sm}) {
+  //   font-size: calc(#{$breakpoint-sm} / #{$base-width} * 1px);
+  // }
+}

@@ -1,7 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+html {
+  font-size: 5.5555555556vw;
+}
+
+:root {
+  --screen-width: 1440;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --screen-width: 1024;
+  }
+}
+@media (max-width: 670px) {
+  :root {
+    --screen-width: 375 ;
+  }
+}
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-boxx;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1230 / var(--screen-width) * 100vw);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: calc(44 / var(--screen-width) * 100vw);
+  gap: 8px;
+}
+.headerTitle {
+  font-size: calc(46 / var(--screen-width) * 100vw);
+  font-weight: 700;
+  letter-spacing: calc(1 / var(--screen-width) * 100vw);
+  text-transform: uppercase;
+  color: rgb(30, 33, 44);
+}
+.headerTitleSub {
+  font-weight: 900;
+  color: rgb(30, 33, 44);
+  font-size: calc(16 / var(--screen-width) * 100vw);
+}
+
+.list {
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.listCard {
+  width: 390px;
+  height: 438px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */

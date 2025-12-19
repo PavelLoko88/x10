@@ -1,24 +1,13 @@
 :root {
-  --screen-width: 1920; // по умолчанию для десктопа
+  --screen-width: 1920;
 }
-
-// @media (max-width: 1024px) {
-//   :root {
-//     --screen-width: 1024; // для планшета
-//   }
-// }
 
 // 670 ????? 
 @media (max-width: 670px) {
   :root {
-    --screen-width: 375 ; // для мобильных
+    --screen-width: 375;
   }
 }
-// @media (max-width: 375px) {
-//   :root {
-//     --screen-width: 375; // для мобильных
-//   }
-// }
 
 @function scale($px) {
   @return calc(#{$px}/var(--screen-width)*100vw);

@@ -31,6 +31,10 @@ body {
 .container {
   width: 100%;
   max-width: scale(1230);
+
+  @media (max-width: 670px) {
+    background-color: red;
+  }
 }
 
 .header {
@@ -40,6 +44,10 @@ body {
   flex-direction: column;
   margin-top: scale(44);
   gap: scale(8);
+
+  @media screen and (max-width: 670px) {
+    background-color: $blue;
+  }
 
   &Title {
     font-size: scale(46);

@@ -49,7 +49,7 @@ const data = [
   },
   {
     id: 7,
-    image: "./assets/item2.png",
+    image: "./assets/item7.png",
     tag: "Development",
     title: "Highload Software Architecture",
     price: "$600",
@@ -121,7 +121,7 @@ const data = [
   },
   {
     id: 16,
-    image: "./assets/item2.png",
+    image: "./assets/item7.png",
     tag: "Development",
     title: "Highload Software Architecture",
     price: "$600",
@@ -145,6 +145,9 @@ const data = [
   },
 ];
 
+let dataFilter = data;
+
+// ВЫВОД СПИСКА + ТАБУЛЯЦИЯ
 const listContainer = document.querySelector(".list");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
@@ -194,19 +197,132 @@ function createItemHTML(item) {
 function loadMoreItems() {
   const start = currentIndex;
   const end = currentIndex + itemsPerPage;
-  const itemsToAdd = data.slice(start, end);
-
+  const itemsToAdd = dataFilter.slice(start, end);
   itemsToAdd.forEach((item) => {
     listContainer.innerHTML += createItemHTML(item);
   });
 
   currentIndex += itemsPerPage;
 
-  if (currentIndex >= data.length) {
+  if (currentIndex >= dataFilter.length) {
     loadMoreBtn.style.display = "none";
+  } else {
+    loadMoreBtn.style.display = "flex";
   }
 }
 
 loadMoreItems();
-
 loadMoreBtn.addEventListener("click", loadMoreItems);
+
+// ВЫВОД ФИЛЬТРОВ
+let activeFilter = "All";
+
+let countAll = data;
+let countMarketing = 0;
+let countManagement = 0;
+let countRecruting = 0;
+let countDesign = 0;
+let countDevelopment = 0;
+
+function countsFilter() {
+  countMarketing = 0;
+  countAll.forEach((item) => {
+    if (item.tag === "Marketing") {
+      countMarketing++;
+    } else if (item.tag === "Management") {
+      countManagement++;
+    } else if (item.tag === "HR & Recruting") {
+      countRecruting++;
+    } else if (item.tag === "Design") {
+      countDesign++;
+    } else if (item.tag === "Development") {
+      countDevelopment++;
+    }
+  });
+}
+countsFilter();
+
+const dataFilterItem = [
+  { id: 1, text: "All", count: countAll.length },
+  { id: 2, text: "Marketing", count: countMarketing },
+  { id: 3, text: "Management", count: countManagement },
+  { id: 4, text: "HR & Recruting", count: countRecruting },
+  { id: 5, text: "Design", count: countDesign },
+  { id: 6, text: "Development", count: countDevelopment },
+];
+
+const filterList = document.querySelector(".filterItems");
+
+// активный фильтр
+function checkActiveFilter(e) {
+  const item = e.target.closest(".filterItem");
+  if (!item) return;
+
+  document
+    .querySelectorAll(".filterItem")
+    .forEach((el) => el.classList.remove("filterItemActive"));
+
+  item.classList.add("filterItemActive");
+
+  const filterText = item.querySelector(".filterItemText").textContent;
+  activeFilter = filterText;
+
+  if (activeFilter === "All") {
+    dataFilter = data;
+  } else {
+    dataFilter = data.filter((item) => item.tag === activeFilter);
+  }
+  currentIndex = 0;
+
+  listContainer.innerHTML = "";
+  searchInput.value = "";
+  loadMoreItems();
+}
+filterList.addEventListener("click", checkActiveFilter);
+
+function createFilterHTML(item) {
+  return `
+   <div class="filterItem ${
+     item.text === activeFilter && "filterItemActive"
+   }" id="btnFilter " }">
+          <p class="filterItemText">${item.text}</p>
+          <p class="filterItemIndex">${item.count}</p>
+        </div>
+  `;
+}
+
+function renderFilter() {
+  filterList.innerHTML = "";
+  dataFilterItem.forEach((item) => {
+    filterList.innerHTML += createFilterHTML(item);
+  });
+}
+renderFilter();
+
+// ПОИСК
+const searchInput = document.getElementById("searchInput");
+
+function searchItems(query) {
+  const lowerCaseQuery = query.toLowerCase();
+  activeFilter = "All";
+  renderFilter();
+  const filteredData = data.filter((item) => {
+    return (
+      (item.title && item.title.toLowerCase().includes(lowerCaseQuery)) ||
+      (item.tag && item.tag.toLowerCase().includes(lowerCaseQuery)) ||
+      (item.author && item.author.toLowerCase().includes(lowerCaseQuery))
+    );
+  });
+
+  dataFilter = filteredData;
+  currentIndex = 0;
+  listContainer.innerHTML = "";
+  loadMoreItems();
+}
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const query = searchInput.value;
+    searchItems(query);
+  }
+});

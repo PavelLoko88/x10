@@ -56,7 +56,83 @@ body {
       font-size: scale(16);
     }
   }
+}
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: scale(12);
+  margin-top: scale(85);
+
+  &Items {
+    display: flex;
+    align-items: center;
+    gap: scale(12);
+  }
+
+  &Item {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    border: scale(1) solid transparent;
+    gap: scale(4);
+    border-radius: scale(4);
+    padding: scale(10) scale(20);
+    transition: 230ms ease-in-out border-color;
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:hover {
+
+      .filterItemText,
+      .filterItemIndex {
+        color: $primary;
+      }
+    }
+
+    &Active {
+      border-color: $primary;
+    }
+
+    &Active .filterItemText,
+    &Active .filterItemIndex {
+      color: $primary;
+    }
+
+    &Text {
+      font-weight: 700;
+      font-size: scale(16);
+      line-height: 1.6;
+      color: $gray-600;
+      cursor: pointer;
+      transition: 230ms ease-in-out color;
+    }
+
+    &Index {
+      color: $gray-600;
+      font-weight: 900;
+      font-size: scale(10);
+      line-height: 1.5;
+      cursor: pointer;
+      transition: 230ms ease-in-out color;
+    }
+  }
+
+  &Input {
+    cursor: pointer;
+    width: scale(315);
+    padding: scale(12) scale(16);
+    border: scale(1) solid $gray-400;
+    border-radius: scale(4);
+
+    font-weight: 400;
+    font-size: scale(14);
+    line-height: 1.5;
+    color: $gray-600;
+  }
 }
 
 .list {
@@ -136,7 +212,6 @@ body {
   }
 }
 
-
 .more {
   width: 100%;
   display: flex;
@@ -147,6 +222,7 @@ body {
   &Button {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: scale(10);
     gap: scale(16);
     background-color: transparent;
@@ -168,11 +244,11 @@ body {
       font-weight: 700;
       font-size: scale(16);
       line-height: 1.6;
+      cursor: pointer;
       color: $gray-800;
     }
   }
 }
-
 
 .stick {
   width: scale(1);

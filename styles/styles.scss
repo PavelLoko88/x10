@@ -34,7 +34,6 @@ body {
     font-size: scale(46);
     font-weight: 700;
     letter-spacing: scale(1);
-    text-transform: uppercase;
     color: $gray-900;
     line-height: 1.3;
 
@@ -42,6 +41,7 @@ body {
       font-weight: 900;
       color: $gray-900;
       line-height: 1.5;
+      text-transform: uppercase;
       font-size: scale(16);
     }
   }
@@ -49,7 +49,7 @@ body {
 }
 
 .list {
-  margin-top: 60px;
+  margin-top: scale(60);
   display: flex;
   gap: scale(30);
   flex-wrap: wrap;
@@ -129,4 +129,25 @@ body {
   width: scale(1);
   height: scale(16);
   background-color: $gray-700;
+}
+
+.marketing {
+  background-color: $green;
+}
+
+.management {
+  background-color: $blue;
+}
+
+.recruting {
+  background-color: $orange;
+}
+
+.design {
+  background-color: $pink;
+
+}
+
+.development {
+  background-color: $purple;
 }

@@ -1,12 +1,12 @@
 :root {
-  --screen-width: 1440; // по умолчанию для десктопа
+  --screen-width: 1920; // по умолчанию для десктопа
 }
 
-@media (max-width: 1024px) {
-  :root {
-    --screen-width: 1024; // для планшета
-  }
-}
+// @media (max-width: 1024px) {
+//   :root {
+//     --screen-width: 1024; // для планшета
+//   }
+// }
 
 // 670 ????? 
 @media (max-width: 670px) {

@@ -26,14 +26,20 @@ body {
   align-items: center;
   font-family: "Lato", sans-serif;
   background-color: $white;
+  position: relative;
+
 }
 
 .container {
   width: 100%;
   max-width: scale(1230);
 
-  @media (max-width: 670px) {
-    background-color: red;
+  div {
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 670px) {
+    padding: 0px scale(15);
   }
 }
 
@@ -46,7 +52,8 @@ body {
   gap: scale(8);
 
   @media screen and (max-width: 670px) {
-    background-color: $blue;
+    margin-top: scale(20);
+    gap: scale(4);
   }
 
   &Title {
@@ -56,12 +63,20 @@ body {
     color: $gray-900;
     line-height: 1.3;
 
+    @media screen and (max-width: 670px) {
+      font-size: scale(26);
+    }
+
     &Sub {
       font-weight: 900;
       color: $gray-900;
       line-height: 1.5;
       text-transform: uppercase;
       font-size: scale(16);
+
+      @media screen and (max-width: 670px) {
+        font-size: scale(10);
+      }
     }
   }
 }
@@ -73,10 +88,21 @@ body {
   gap: scale(12);
   margin-top: scale(85);
 
+  @media screen and (max-width: 670px) {
+    gap: scale(10);
+    margin-top: scale(40);
+    flex-wrap: wrap;
+  }
+
   &Items {
     display: flex;
     align-items: center;
     gap: scale(12);
+
+    @media screen and (max-width: 670px) {
+      gap: scale(6);
+      flex-wrap: wrap;
+    }
   }
 
   &Item {
@@ -88,6 +114,10 @@ body {
     border-radius: scale(4);
     padding: scale(10) scale(20);
     transition: 230ms ease-in-out border-color;
+
+    @media screen and (max-width: 670px) {
+      padding: scale(6) scale(15);
+    }
 
     &:hover {
       border-color: $primary;
@@ -117,6 +147,10 @@ body {
       color: $gray-600;
       cursor: pointer;
       transition: 230ms ease-in-out color;
+
+      @media screen and (max-width: 670px) {
+        font-size: scale(14);
+      }
     }
 
     &Index {
@@ -126,6 +160,10 @@ body {
       line-height: 1.5;
       cursor: pointer;
       transition: 230ms ease-in-out color;
+
+      @media screen and (max-width: 670px) {
+        font-size: scale(9);
+      }
     }
   }
 
@@ -140,6 +178,12 @@ body {
     font-size: scale(14);
     line-height: 1.5;
     color: $gray-600;
+
+    @media screen and (max-width: 670px) {
+      width: 100%;
+      padding: scale(10) scale(14);
+      font-size: scale(13);
+    }
   }
 }
 
@@ -149,21 +193,36 @@ body {
   gap: scale(30);
   flex-wrap: wrap;
 
+  @media screen and (max-width: 670px) {
+    margin-top: scale(30);
+    gap: scale(15);
+  }
+
   &Card {
     width: scale(390);
     height: scale(438);
     border-radius: scale(4);
     display: flex;
     flex-direction: column;
+    background-color: $white;
     border: scale(1) solid $gray-300;
     box-shadow: scale(0) scale(4) scale(4) scale(-4) rgba(30, 33, 44, 0.03),
       scale(0) scale(12) scale(10)scale(-6) rgba(154, 156, 165, 0.04),
       scale(0) scale(30) scale(24) scale(-10) rgba(154, 156, 165, 0.05),
       scale(0) scale(80) scale(80) scale(-20) rgba(154, 156, 165, 0.08);
 
+    @media screen and (max-width: 670px) {
+      width: 100%;
+      height: auto;
+    }
+
     &Image {
       width: 100%;
       height: scale(240);
+
+      @media screen and (max-width: 670px) {
+        height: scale(200);
+      }
     }
 
     &Content {
@@ -171,6 +230,11 @@ body {
       display: flex;
       flex-direction: column;
       gap: scale(20);
+
+      @media screen and (max-width: 670px) {
+        padding: scale(16);
+        gap: scale(15);
+      }
 
       &Tag {
         background-color: $green;
@@ -182,11 +246,19 @@ body {
         border-radius: scale(4);
         width: fit-content;
 
+        @media screen and (max-width: 670px) {
+          height: scale(22);
+        }
+
         &Text {
           font-weight: 400;
           font-size: scale(14);
           line-height: 1.5;
           color: $white;
+
+          @media screen and (max-width: 670px) {
+            font-size: scale(13);
+          }
         }
       }
 
@@ -195,6 +267,10 @@ body {
         font-weight: 700;
         line-height: 1.5;
         font-size: scale(20);
+
+        @media screen and (max-width: 670px) {
+          font-size: scale(16);
+        }
       }
 
       &Info {
@@ -202,11 +278,19 @@ body {
         align-items: center;
         gap: scale(8);
 
+        @media screen and (max-width: 670px) {
+          gap: scale(5);
+        }
+
         &Price {
           font-weight: 700;
           font-size: scale(18);
           line-height: 1.5;
           color: $red;
+
+          @media screen and (max-width: 670px) {
+            font-size: scale(14);
+          }
         }
 
         &Author {
@@ -214,6 +298,10 @@ body {
           font-size: scale(18);
           line-height: 1.5;
           color: $gray-700;
+
+          @media screen and (max-width: 670px) {
+            font-size: scale(14);
+          }
         }
       }
     }
@@ -227,6 +315,10 @@ body {
   align-items: center;
   margin: scale(70) 0px;
 
+  @media screen and (max-width: 670px) {
+    margin: scale(35) 0px;
+  }
+
   &Button {
     display: flex;
     justify-content: center;
@@ -239,13 +331,23 @@ body {
     transition: 230ms ease-in-out;
     cursor: pointer;
 
+    @media screen and (max-width: 670px) {
+      padding: scale(8);
+      gap: scale(14);
+    }
+
     &:hover {
       opacity: .7;
     }
 
     &Image {
       width: scale(24);
-      height: scale(24)
+      height: scale(24);
+
+      @media screen and (max-width: 670px) {
+        width: scale(18);
+        height: scale(18);
+      }
     }
 
     &Text {
@@ -254,6 +356,10 @@ body {
       line-height: 1.6;
       cursor: pointer;
       color: $gray-800;
+
+      @media screen and (max-width: 670px) {
+        font-size: scale(14);
+      }
     }
   }
 }
@@ -262,6 +368,10 @@ body {
   width: scale(1);
   height: scale(16);
   background-color: $gray-700;
+
+  @media screen and (max-width: 670px) {
+    height: scale(10);
+  }
 }
 
 .marketing {
@@ -287,12 +397,18 @@ body {
 
 .attribute {
   position: absolute;
+  z-index: 1;
 
   &Dots {
     height: scale(143);
     width: scale(105);
     right: 0px;
     top: scale(50);
+
+    @media screen and (max-width: 670px) {
+      height: scale(86);
+      width: scale(60);
+    }
   }
 
   &Hemisphere {
@@ -300,6 +416,13 @@ body {
     width: scale(83);
     left: scale(56);
     top: scale(687);
+
+    @media screen and (max-width: 670px) {
+      height: scale(28);
+      width: scale(38);
+      left: 0px;
+      top: scale(1330);
+    }
   }
 
   &Arrow {
@@ -307,5 +430,13 @@ body {
     width: scale(85);
     right: scale(72);
     top: scale(1104);
+
+    @media screen and (max-width: 670px) {
+      height: scale(42);
+      width: scale(42);
+      right: scale(36);
+      top: auto;
+      bottom: scale(50);
+    }
   }
 }

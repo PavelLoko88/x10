@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    image: "./assets/item1.png",
+    image: "./assets/listItem/item1.png",
     tag: "Marketing",
     title: "The Ultimate Google Ads Training Course",
     price: "$100",
@@ -9,7 +9,7 @@ const data = [
   },
   {
     id: 2,
-    image: "./assets/item2.png",
+    image: "./assets/listItem/item2.png",
     tag: "Management",
     title: "Prduct Management Fundamentals",
     price: "$480",
@@ -17,7 +17,7 @@ const data = [
   },
   {
     id: 3,
-    image: "./assets/item3.png",
+    image: "./assets/listItem/item3.png",
     tag: "HR & Recruting",
     title: "HR  Management and Analytics",
     price: "$200",
@@ -25,7 +25,7 @@ const data = [
   },
   {
     id: 4,
-    image: "./assets/item4.png",
+    image: "./assets/listItem/item4.png",
     tag: "Marketing",
     title: "Brand Management & PR Communications",
     price: "$530",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 5,
-    image: "./assets/item5.png",
+    image: "./assets/listItem/item5.png",
     tag: "Design",
     title: "Graphic Design Basic",
     price: "$500",
@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: 6,
-    image: "./assets/item6.png",
+    image: "./assets/listItem/item6.png",
     tag: "Management",
     title: "Business Development Management",
     price: "$400",
@@ -49,7 +49,7 @@ const data = [
   },
   {
     id: 7,
-    image: "./assets/item7.png",
+    image: "./assets/listItem/item7.png",
     tag: "Development",
     title: "Highload Software Architecture",
     price: "$600",
@@ -57,7 +57,7 @@ const data = [
   },
   {
     id: 8,
-    image: "./assets/item8.png",
+    image: "./assets/listItem/item8.png",
     tag: "HR & Recruting",
     title: "Human Resources – Selection and Recruitment",
     price: "$150",
@@ -65,7 +65,7 @@ const data = [
   },
   {
     id: 9,
-    image: "./assets/item9.png",
+    image: "./assets/listItem/item9.png",
     tag: "Design",
     title: "User Experience. Human-centered Design",
     price: "$240",
@@ -73,7 +73,7 @@ const data = [
   },
   {
     id: 10,
-    image: "./assets/item1.png",
+    image: "./assets/listItem/item1.png",
     tag: "Marketing",
     title: "The Ultimate Google Ads Training Course",
     price: "$100",
@@ -81,7 +81,7 @@ const data = [
   },
   {
     id: 11,
-    image: "./assets/item2.png",
+    image: "./assets/listItem/item2.png",
     tag: "Management",
     title: "Prduct Management Fundamentals",
     price: "$480",
@@ -89,7 +89,7 @@ const data = [
   },
   {
     id: 12,
-    image: "./assets/item3.png",
+    image: "./assets/listItem/item3.png",
     tag: "HR & Recruting",
     title: "HR  Management and Analytics",
     price: "$200",
@@ -97,7 +97,7 @@ const data = [
   },
   {
     id: 13,
-    image: "./assets/item4.png",
+    image: "./assets/listItem/item4.png",
     tag: "Marketing",
     title: "Brand Management & PR Communications",
     price: "$530",
@@ -105,7 +105,7 @@ const data = [
   },
   {
     id: 14,
-    image: "./assets/item5.png",
+    image: "./assets/listItem/item5.png",
     tag: "Design",
     title: "Graphic Design Basic",
     price: "$500",
@@ -113,7 +113,7 @@ const data = [
   },
   {
     id: 15,
-    image: "./assets/item6.png",
+    image: "./assets/listItem/item6.png",
     tag: "Management",
     title: "Business Development Management",
     price: "$400",
@@ -121,7 +121,7 @@ const data = [
   },
   {
     id: 16,
-    image: "./assets/item7.png",
+    image: "./assets/listItem/item7.png",
     tag: "Development",
     title: "Highload Software Architecture",
     price: "$600",
@@ -129,7 +129,7 @@ const data = [
   },
   {
     id: 17,
-    image: "./assets/item8.png",
+    image: "./assets/listItem/item8.png",
     tag: "HR & Recruting",
     title: "Human Resources – Selection and Recruitment",
     price: "$150",
@@ -137,7 +137,7 @@ const data = [
   },
   {
     id: 18,
-    image: "./assets/item9.png",
+    image: "./assets/listItem/item9.png",
     tag: "Design",
     title: "User Experience. Human-centered Design",
     price: "$240",

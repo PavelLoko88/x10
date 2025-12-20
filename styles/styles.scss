@@ -284,3 +284,28 @@ body {
 .development {
   background-color: $purple;
 }
+
+.attribute {
+  position: absolute;
+
+  &Dots {
+    height: scale(143);
+    width: scale(105);
+    right: 0px;
+    top: scale(50);
+  }
+
+  &Hemisphere {
+    height: scale(44);
+    width: scale(83);
+    left: scale(56);
+    top: scale(687);
+  }
+
+  &Arrow {
+    height: scale(85);
+    width: scale(85);
+    right: scale(72);
+    top: scale(1104);
+  }
+}

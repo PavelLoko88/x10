@@ -263,4 +263,26 @@ body {
   background-color: #7772F1;
 }
 
+.attribute {
+  position: absolute;
+}
+.attributeDots {
+  height: calc(143 / var(--screen-width) * 100vw);
+  width: calc(105 / var(--screen-width) * 100vw);
+  right: 0px;
+  top: calc(50 / var(--screen-width) * 100vw);
+}
+.attributeHemisphere {
+  height: calc(44 / var(--screen-width) * 100vw);
+  width: calc(83 / var(--screen-width) * 100vw);
+  left: calc(56 / var(--screen-width) * 100vw);
+  top: calc(687 / var(--screen-width) * 100vw);
+}
+.attributeArrow {
+  height: calc(85 / var(--screen-width) * 100vw);
+  width: calc(85 / var(--screen-width) * 100vw);
+  right: calc(72 / var(--screen-width) * 100vw);
+  top: calc(1104 / var(--screen-width) * 100vw);
+}
+
 /*# sourceMappingURL=styles.css.map */

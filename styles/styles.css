@@ -47,7 +47,7 @@ body {
 }
 @media screen and (max-width: 670px) {
   .container {
-    padding: 0px 15px;
+    padding: 0px calc(15 / var(--screen-width) * 100vw);
   }
 }
 
@@ -436,7 +436,7 @@ body {
     width: calc(42 / var(--screen-width) * 100vw);
     right: calc(36 / var(--screen-width) * 100vw);
     top: auto;
-    bottom: 50px;
+    bottom: calc(50 / var(--screen-width) * 100vw);
   }
 }
 

@@ -421,7 +421,7 @@ body {
     height: calc(28 / var(--screen-width) * 100vw);
     width: calc(38 / var(--screen-width) * 100vw);
     left: 0px;
-    top: calc(1330 / var(--screen-width) * 100vw);
+    top: 47.25%;
   }
 }
 .attributeArrow {
@@ -436,7 +436,7 @@ body {
     width: calc(42 / var(--screen-width) * 100vw);
     right: calc(36 / var(--screen-width) * 100vw);
     top: auto;
-    bottom: calc(50 / var(--screen-width) * 100vw);
+    bottom: 1.5%;
   }
 }
 
